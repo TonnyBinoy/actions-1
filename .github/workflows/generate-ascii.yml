@@ -9,10 +9,12 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
-      - name: Make script executable
-        run: chmod +x ascii-script.sh
+      - name: List Repo Files
+        run: ls -ltra
 
-      - name: Run ASCII Script
-        run: ./ascii-script.sh
+      - name: Executing Shell Script
+        run: |
+          chmod +x ascii-script.sh
+          ./ascii-script.sh
